@@ -1,0 +1,82 @@
+body {
+	background-color: #add8e6;
+}
+
+.App {
+	width: 400px;
+	margin: auto;
+}
+
+.App-file {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 5px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 2fr;
+	border-color: snow;
+}
+
+.App-icon {
+	margin: 15px;
+	font-size: 25px;
+}
+
+.App-size {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.App-fields {
+	margin-top: 10px;
+}
+
+.file-style {
+	width: 400px;
+	height: 430px;
+}
+
+.file-header {
+	border-bottom: 1px solid gainsboro;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	margin-bottom: 15px;
+	height: 40px;
+}
+
+.type {
+	margin-top: 5px;
+}
+
+.close-button {
+	text-align: right;
+	border: none;
+	background-color: white;
+	right: 15px;
+	position: absolute;
+	font-size: 17px;
+	color: gray;
+}
+
+.file-name {
+	height: 100%;
+}
+
+.file {
+	margin-top: 5px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  } */
+/* } */
