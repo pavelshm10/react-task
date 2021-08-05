@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## `npm install`
-Import all the libraries from npm Registry
+Import all libraries from npm Registry
 
 ## Available Scripts
 
