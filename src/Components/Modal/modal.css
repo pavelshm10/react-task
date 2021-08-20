@@ -1,0 +1,39 @@
+.modal{
+	position: relative;
+	background-color: white;
+	width: 150% !important;
+	text-align: center;
+}
+
+.file-header {
+	border-bottom: 1px solid gainsboro;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	margin-bottom: 15px;
+	height: 50px;
+	line-height: 3;
+}
+
+.file-style {
+	width: 400px;
+	height: 400px;
+}
+
+.close-button {
+	text-align: right;
+	border: none;
+	background-color: white;
+	font-size: 17px;
+	color: gray;
+	margin-right: 3px;
+}
+
+
+
+/* mobile   */
+/* @media screen and (max-width: 1224px){
+	.modal{
+		border: 5px solid yellow;
+        width:
+	}
+} */

@@ -1,0 +1,31 @@
+.App-file {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 5px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 2fr;
+	border-color: snow;
+}
+
+.App-icon {
+	margin: 15px;
+	font-size: 25px;
+}
+
+.App-size {
+	text-align: right;
+	margin-top: 10px;
+}
+
+
+.App-fields {
+	margin-top: 10px;
+}
+
+
+.App-type {
+	margin-top: 5px;
+}

@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
 import Modal from "react-modal";
+import "../Modal/Modal.css";
 
 const customStyles = {
 	overlay: {
@@ -22,25 +23,30 @@ const customStyles = {
 	},
 };
 
-const DialogModal = forwardRef((file: any, ref) => {
-	const [modalIsOpen, setIsOpen] = useState(false);
+const DialogModal = forwardRef((props: any, ref: any) => {
+	const [isOpen, setIsOpen] = useState(false);
 	const [currentFile, setCurrentFile] = useState("");
 	const [url, setUrl] = useState("");
 	useImperativeHandle(ref, () => ({
 		openModal() {
-			setIsOpen(true);
-			setIsOpen(true);
-			setCurrentFile(file.name);
-			setUrl("https://mighty-sierra-05836.herokuapp.com/" + file.name);
+			setCurrentFile(props.file.name);
+			setUrl("https://mighty-sierra-05836.herokuapp.com/" + props.file.name);
 			setIsOpen(true);
 		},
 	}));
 
 	function closeModal() {
 		setIsOpen(false);
+		props.onClick(false);
 	}
+
 	return (
-		<Modal isOpen={modalIsOpen} style={customStyles} ariaHideApp={false}>
+		<Modal
+			className="modal"
+			isOpen={isOpen}
+			style={customStyles}
+			ariaHideApp={false}
+		>
 			<div className="file-header">
 				<b className="file-name">{currentFile}</b>
 				<button className="close-button" onClick={closeModal}>
@@ -48,19 +54,17 @@ const DialogModal = forwardRef((file: any, ref) => {
 				</button>
 			</div>
 
-			<div className="file">
-				{currentFile.includes("jpg") ? (
-					<img src={url} className="file-style" alt="file_image" />
-				) : currentFile.includes("pdf") ? (
-					<iframe className="file-style" src={url} title="file_style"></iframe>
-				) : currentFile.includes("mp4") ? (
-					<video className="file-style" controls>
-						<source src={url} type="video/mp4" />
-					</video>
-				) : (
-					""
-				)}
-			</div>
+			{currentFile.includes("jpg") ? (
+				<img src={url} className="file-style" alt="file_image" />
+			) : currentFile.includes("pdf") ? (
+				<iframe className="file-style" src={url} title="file_style"></iframe>
+			) : currentFile.includes("mp4") ? (
+				<video className="file-style" controls>
+					<source src={url} type="video/mp4" />
+				</video>
+			) : (
+				""
+			)}
 		</Modal>
 	);
 });
